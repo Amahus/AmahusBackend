@@ -38,10 +38,10 @@ app.get("/", (req, res) => {
 });
 
 // use only to drop the database and re-sync
-// db.sequelize.sync({ force: true }).then(() => {
-// console.log("Drop and re-sync db.");
-// });
-db.sequelize.sync();
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
+// db.sequelize.sync();
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

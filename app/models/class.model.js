@@ -1,19 +1,19 @@
 module.exports = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define("tutorial", {
+  const Class = sequelize.define("class", {
     id: {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
       primaryKey: true,
     },
-    title: {
+    className: {
       type: Sequelize.STRING,
     },
     description: {
       type: Sequelize.STRING,
     },
-    published: {
-      type: Sequelize.BOOLEAN,
+    classRole: {
+      type: Sequelize.STRING,
     },
   });
-  return Tutorial;
+  return Class;
 };

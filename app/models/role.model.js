@@ -1,19 +1,16 @@
 module.exports = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define("tutorial", {
+  const Role = sequelize.define("role", {
     id: {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
       primaryKey: true,
     },
-    title: {
+    roleType: {
       type: Sequelize.STRING,
     },
-    description: {
+    roleDescription: {
       type: Sequelize.STRING,
-    },
-    published: {
-      type: Sequelize.BOOLEAN,
     },
   });
-  return Tutorial;
+  return Role;
 };

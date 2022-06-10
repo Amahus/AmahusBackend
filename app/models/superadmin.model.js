@@ -1,19 +1,20 @@
 module.exports = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define("tutorial", {
+  const SuperAdmin = sequelize.define("superadmin", {
     id: {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
       primaryKey: true,
     },
-    title: {
+    userName: {
       type: Sequelize.STRING,
     },
-    description: {
+    password: {
       type: Sequelize.STRING,
     },
-    published: {
-      type: Sequelize.BOOLEAN,
+    adminId: {
+      type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV4,
     },
   });
-  return Tutorial;
+  return SuperAdmin;
 };
