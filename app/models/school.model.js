@@ -11,12 +11,6 @@ module.exports = (sequelize, Sequelize) => {
     description: {
       type: Sequelize.STRING,
     },
-    address: {
-      type: Sequelize.STRING,
-    },
-    class: {
-      type: Sequelize.STRING,
-    },
     adminId: {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,

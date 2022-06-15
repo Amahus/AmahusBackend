@@ -29,9 +29,6 @@ module.exports = (sequelize, Sequelize) => {
     batch: {
       type: Sequelize.STRING,
     },
-    schoolId: {
-      type: Sequelize.STRING,
-    },
   });
   return User;
 };
